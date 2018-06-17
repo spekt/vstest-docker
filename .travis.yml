@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+
+language: csharp
+
+matrix:
+    include:
+        - dotnet: 2.1
+          mono: latest
+
+script:
+    - dotnet build test/assets.sln
+    - test.sh
