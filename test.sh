@@ -8,6 +8,9 @@ function _log() {
     printf "... %s\\n" "$*"
 }
 
+# Build the assets
+dotnet build test/assets.sln
+
 # Build the latest image
 _log "Building latest image"
 docker image rm spekt/alpine-vstest 2> /dev/null || true

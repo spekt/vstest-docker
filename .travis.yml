@@ -10,5 +10,4 @@ matrix:
           mono: latest
 
 script:
-    - dotnet build test/assets.sln
     - test.sh
