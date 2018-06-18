@@ -20,15 +20,19 @@ docker build -t spekt/alpine-vstest .
 _log "Creating a test container"
 test_container=alpine-vstest-test
 docker container kill $test_container 2> /dev/null || true
-docker container run -td --rm --name $test_container spekt/alpine-vstest:latest
+docker container run -td -w /root/test --rm --name $test_container spekt/alpine-vstest:latest
 docker container cp test/ $test_container:/root/
 
 # Run tests in the container
 _log "Let's run a few tests"
 test_failed=false
-docker container exec -w /root/test $test_container ./run.sh || test_failed=true
+docker container exec $test_container ./run.sh || test_failed=true
 if [ $test_failed = true ]; then
     _log ".. Test failed!"
 fi
 docker container rm -f $test_container
 _log "Done"
+
+if [ $test_failed = true ]; then
+    exit 1
+fi
