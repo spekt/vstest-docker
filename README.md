@@ -1,6 +1,6 @@
 # Docker image for vstest runner
 
-[![Build Status](https://travis-ci.com/spekt/vstest-docker.svg?branch=master)](https://travis-ci.com/spekt/vstest-docker) | [![Docker Pulls](https://img.shields.io/docker/pulls/spekt/alpine-vstest.svg)](https://hub.docker.com/r/spekt/alpine-vstest/) | [![Docker Stars](https://img.shields.io/docker/stars/spekt/alpine-vstest.svg)](https://hub.docker.com/r/spekt/alpine-vstest/)
+[![Build Status](https://travis-ci.com/spekt/vstest-docker.svg?branch=master)](https://travis-ci.com/spekt/vstest-docker) [![Docker Pulls](https://img.shields.io/docker/pulls/spekt/alpine-vstest.svg)](https://hub.docker.com/r/spekt/alpine-vstest/) [![Docker Stars](https://img.shields.io/docker/stars/spekt/alpine-vstest.svg)](https://hub.docker.com/r/spekt/alpine-vstest/)
 
 ## Usage instructions
 ```sh
